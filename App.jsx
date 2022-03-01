@@ -4,6 +4,7 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import BottomSheet from "./components/BottomSheet";
 import Button from "./components/Button";
+import Input from "./components/Input";
 
 const App = () => {
   const sheetRef = useRef(null);
@@ -22,6 +23,7 @@ const App = () => {
         <TouchableOpacity style={styles.button} onPress={onPress} />
         <BottomSheet ref={sheetRef}>
           <Button />
+          <Input />
         </BottomSheet>
       </View>
     </GestureHandlerRootView>
