@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import BottomSheet from "./components/BottomSheet";
+import Button from "./components/Button";
 
 const App = () => {
   const sheetRef = useRef(null);
@@ -19,7 +20,9 @@ const App = () => {
       <View style={styles.container}>
         <StatusBar style="light" />
         <TouchableOpacity style={styles.button} onPress={onPress} />
-        <BottomSheet ref={sheetRef}>{/* your code here */}</BottomSheet>
+        <BottomSheet ref={sheetRef}>
+          <Button />
+        </BottomSheet>
       </View>
     </GestureHandlerRootView>
   );
