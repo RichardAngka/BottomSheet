@@ -14,22 +14,22 @@ const button = {
     secondary: {
       // your style here
     },
+    ghost: {
+      //Your style here
+    },
   },
   size: {
     s: {
       paddingVertical: 8,
       paddingHorizontal: 16,
-      fontSize: 12,
     },
     m: {
       paddingVertical: 16,
       paddingHorizontal: 32,
-      fontSize: 18,
     },
     l: {
       paddingVertical: 18,
       paddingHorizontal: 36,
-      fontSize: 22,
     },
   },
 };

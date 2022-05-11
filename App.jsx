@@ -1,10 +1,11 @@
 import React, { useCallback, useRef } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, TouchableOpacity, View, SafeAreaView } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import BottomSheet from "./components/BottomSheet";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import PickerDemo from "./components/PickerDemo";
 
 const App = () => {
   const sheetRef = useRef(null);
@@ -18,13 +19,10 @@ const App = () => {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView />
       <View style={styles.container}>
         <StatusBar style="light" />
-        <TouchableOpacity style={styles.button} onPress={onPress} />
-        <BottomSheet ref={sheetRef}>
-          <Button />
-          <Input />
-        </BottomSheet>
+        <PickerDemo />
       </View>
     </GestureHandlerRootView>
   );
@@ -36,9 +34,9 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "#111",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#000",
+    // alignItems: "center",
+    // justifyContent: "center",
   },
   button: {
     height: 50,

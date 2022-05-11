@@ -3,7 +3,6 @@ import button from "../../styles/button";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexWrap: "wrap",
   },
   normal: {
@@ -11,10 +10,14 @@ const styles = StyleSheet.create({
     ...button.variants.primary._active,
     ...button.variants.primary._disabled,
   },
+  contentContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    ...button.size.l,
+  },
   content: {
     color: "#1b1b1b",
-    textAlign: "center",
-    ...button.size.l,
+    //typography here
   },
 });
 
